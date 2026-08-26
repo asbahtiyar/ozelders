@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBKoçluk | Samet Bahtiyar Koçluk ve Özel Ders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --card-navy: #152238;
+            --card-dark: #333333;
+            --gold-border: #c5a059;
+            --gold-shadow: rgba(197, 160, 89, 0.25);
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: var(--font-body);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px 20px;
+        }
+
+        /* Üst Başlık Alanı */
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        /* Ana Buton Alanı */
+        main {
+            width: 100%;
+            max-width: 820px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .action-card {
+            display: flex;
+            align-items: center;
+            padding: 20px 28px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #ffffff;
+            border: 2px solid var(--gold-border);
+            box-shadow: 0 8px 20px var(--gold-shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .action-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(197, 160, 89, 0.4);
+        }
+
+        /* Kart Renk Alternatifleri */
+        .card-navy {
+            background: linear-gradient(135deg, #101a2c 0%, #1c2d4a 100%);
+        }
+
+        .card-dark {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            margin-right: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-icon svg {
+            width: 38px;
+            height: 38px;
+            fill: none;
+            stroke: var(--gold-border);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .card-content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .card-content p {
+            font-size: 0.88rem;
+            color: #d1d5db;
+            line-height: 1.35;
+        }
+
+        /* Alt Açıklama ve Footer */
+        .site-description {
+            max-width: 750px;
+            text-align: center;
+            margin-top: 35px;
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+	.site-sub-description {
+            max-width: 750px;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mobil Uyum */
+        @media (max-width: 640px) {
+            body {
+                padding: 25px 15px 15px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .action-card {
+                padding: 16px 18px;
+            }
+            .card-icon {
+                width: 36px;
+                height: 36px;
+                margin-right: 14px;
+            }
+            .card-icon svg {
+                width: 30px;
+                height: 30px;
+            }
+            .card-content h2 {
+                font-size: 0.95rem;
+            }
+            .card-content p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Başlık -->
+    <header>
+        <h1>SAMET BAHTİYAR</h1>
+        <p>Koçluk ve Özel Ders</p>
+    </header>
+
+    <!-- Ana Buton Kartları -->
+    <main>
+        <!-- Buton 1 -->
+         <a href="https://wa.me/905325055773?text=Merhaba,%20siteniz üzerinden ulaşıyorum. Konu eksiklerimi kapatmak istiyorum." target="_blank" class="action-card card-navy">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="card-content">
+                <h2>Konu eksiklerimi kapatmak istiyorum</h2>
+                <p>Belirli konulardaki eksiklerini kapatalım ve netlerini artıralım.</p>
+            </div>
+        </a>
+
+        <!-- Buton 2 -->
+         <a href="https://wa.me/905325055773?text=Merhaba,%20siteniz üzerinden ulaşıyorum. Matematikte gerçek seviyemi öğrenmek istiyorum." target="_blank" class="action-card card-dark">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <div class="card-content">
+                <h2>Gerçek seviyemi öğrenmek istiyorum</h2>
+                <p>Gerçek matematik seviyeni ölçelim, doğru yöntem ve stratejiyle netlerini artıralım.</p>
+            </div>
+        </a>
+
+        <!-- Buton 3 -->
+         <a href="https://wa.me/905325055773?text=Merhaba,%20siteniz üzerinden ulaşıyorum. Deneme analizi ve çalışma programı almak istiyorum." target="_blank" class="action-card card-navy">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="card-content">
+                <h2>Deneme analizi ve çalışma programı istiyorum</h2>
+                <p>Sınav skorlarını uzman gözüyle analiz edelim ve sana özel çalışma programı hazırlayalım.</p>
+            </div>
+        </a>
+
+        <!-- Buton 4 -->
+         <a href="https://wa.me/905325055773?text=Merhaba,%20siteniz üzerinden ulaşıyorum. Yazılıya hazırlanmak istiyorum." target="_blank" class="action-card card-dark">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="card-content">
+                <h2>Ara sınıfım(9, 10, 11), yazılıya hazırlanmak istiyorum</h2>
+                <p>Yazılı sınavlarda yüksek puan ve YKS için sağlam akademik temel oluşturmanı sağlayalım.</p>
+            </div>
+        </a>
+
+        <!-- Buton 5 -->
+        <a href="https://wa.me/905325055773?text=Merhaba,%20siteniz üzerinden ulaşıyorum. Özel durumumu açıklamak istiyorum." target="_blank" class="action-card card-navy">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="card-content">
+                <h2>Bunların dışında...</h2>
+                <p>Farklı bir problemin varsa ister yaz, ister ses kaydı at, ister ara, problemin ne ise çözelim.</p>
+            </div>
+        </a>
+    </main>
+
+    <!-- Alt Metin -->
+    <p class="site-description">
+        Tüm bu adımlar, tamamen kişiye özel ve sınırlı sayıda öğrenciyle yürütülen bir çalışma sürecine açılır.      
+    <br><br>
+    <a href="https://wa.me/905325055773?text=Merhaba,%20Sunum randevusu almak istiyorum." style="color: #c5a059; text-decoration: underline; font-weight: 600;">
+        Çalışma sistemimiz ve referanslarımız için Sunum Randevusu alabilirsiniz →
+    </a>
+</p>
+    </p>
+
+    <!-- Footer -->
+    <footer>
+        © SBKoçluk 2026 - Tüm Hakları Saklıdır.
+    </footer>
+
+</body>
+</html>
