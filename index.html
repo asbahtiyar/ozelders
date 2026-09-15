@@ -320,6 +320,36 @@
     <footer>
         © SBKoçluk 2026 - Tüm Hakları Saklıdır.
     </footer>
+<!-- Deneme Analizi Yeni Sayfa / Modal Yapısı -->
+    <div id="denemeModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 style="font-family: var(--font-heading); color: var(--text-main); margin-bottom: 10px; font-size: 1.3rem;">DENEME ANALİZİ VE ÇALIŞMA PROGRAMI</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Detaylar için aşağıdaki görsele tıklayabilirsiniz.</p>
+            
+            <div class="modal-image-container">
+                <!-- BURAYA GÖRSELİNİN DOSYA ADINI VE TIKLANDIĞINDA GİDİLECEK LİNKİ YAZABİLİRSİN -->
+                <a href="BURAYA_YONLENDİRİLECEK_LİNKİ_YAZIN" target="_blank">
+                    <img src="deneme-afis.jpg" alt="Deneme Analizi ve Çalışma Programı">
+                </a>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        function openModal() {
+            document.getElementById('denemeModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('denemeModal').style.display = 'none';
+        }
+        // Pencerenin dışına tıklandığında kapanması için
+        window.onclick = function(event) {
+            var modal = document.getElementById('denemeModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
