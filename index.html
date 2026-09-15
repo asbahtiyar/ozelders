@@ -251,6 +251,16 @@
             .card-content p {
                 font-size: 0.8rem;
             }
+		/* Web ve Büyük Ekranlar İçin Modal Genişlik Ayarı */
+        @media (min-width: 640px) {
+            .modal-content {
+                max-width: 850px; /* Pencerenin genişliğini webde büyüttük */
+                padding: 45px 35px 35px 35px; /* İç boşlukları ferahlattık */
+            }
+            .modal-image-container img {
+                max-height: 68vh; /* Görseli de web ekranına göre büyüttük */
+            }
+        }
 
     </style>
 </head>
